@@ -33,10 +33,18 @@ class Guest
     end
 
     def self.pro_traveller
-        Trip.all.each_with_object(Hash.new(0)) do |trip, hash|
-            hash[trip.guest] += 1
-            return hash.first[0]
+        pro = Trip.all.each_with_object(Hash.new(0)) do |trip, hash|
+            # hash.each do |x, y|
+                hash[trip.guest] += 1
+                hash.first[0]
+                # binding.pry
         end
+        result = pro.select do |key, value|
+            if value > 1
+                key
+            end
+        end
+        result.keys
     end
 
     def self.find_all_by_name(name)

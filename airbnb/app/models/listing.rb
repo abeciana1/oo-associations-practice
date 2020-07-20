@@ -38,10 +38,10 @@ class Listing
         end
     end
 
-    def self.most_popular
-        Trip.all.each_with_object(Hash.new(0)) do |trip, hash|
-            hash[trip.listing] += 1
-            return hash.first[0]
-        end
-    end
+    # def self.most_popular
+    #     Trip.all.each_with_object(Hash.new(0)) do |trip, hash|
+    #         hash[trip.listing] += 1
+    #         return hash.first[0]
+    #     end
+    # end
 end

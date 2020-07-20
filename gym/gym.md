@@ -21,15 +21,24 @@ etc?
 
 #### Client
 
+- #initialize
+* initialize with a name and default trainer to nil
+
 - #assign_trainer
   - should take a trainer as argument and assign it to the client
 
 #### Location
 
+- #initialize
+* initialize with a city name
+
 - .least_clients
   - should find which location has the least clients training there. we need to increase the marketing spend for that location!
 
 #### Trainer
+
+- #initialize
+* initialize with a name and years of exp
 
 - .most_clients
   - should find which trainer has the most clients. give that trainer a bonus!
