@@ -30,8 +30,6 @@ l1.trip_count
 
 Listing.find_all_by_city("NYC")
 
-Listing.most_popular
-
 g2.listings
 
 g2.trips
@@ -40,7 +38,9 @@ g2.trip_count
 
 Guest.pro_traveller
 
-Guest.find_all_by_name("Russell")
+# Guest.find_all_by_name("Russell")
+
+Listing.most_popular
 
 binding.pry
 0

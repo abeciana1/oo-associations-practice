@@ -1,4 +1,5 @@
 require "pry"
+require_relative './trip.rb'
 
 class Guest
 
@@ -34,12 +35,11 @@ class Guest
 
     def self.pro_traveller
         pro = Trip.all.each_with_object(Hash.new(0)) do |trip, hash|
-            # hash.each do |x, y|
                 hash[trip.guest] += 1
                 hash.first[0]
-                # binding.pry
         end
         result = pro.select do |key, value|
+            binding.pry
             if value > 1
                 key
             end
